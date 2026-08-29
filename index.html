@@ -162,12 +162,15 @@
   .project:hover{border-color:var(--accent-dim);}
   .project-head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:8px;}
   .project-head h3{font-size:17px; font-weight:700;}
-  .project-tag{font-family:var(--mono); font-size:11px; color:var(--text-muted);}
-  .project p{color:var(--text-muted); font-size:14.5px; margin-bottom:12px;}
-  .project-meta{display:flex; gap:16px; font-family:var(--mono); font-size:12px; color:var(--text-muted); flex-wrap:wrap;}
-  .project-meta a{color:var(--accent);}
-  .project-meta a:hover{text-decoration:underline;}
-
+  .project-shot{
+    width:100%; max-height:340px; object-fit:cover; display:block;
+    border-radius:var(--radius); border:1px solid var(--border);
+    background:var(--surface-alt); margin:12px 0;
+  }
+  .feature-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:10px; margin:14px 0;
+  }
   .feature-item{
     background:var(--surface-alt); border:1px solid var(--border);
     border-radius:var(--radius); padding:12px 14px;
@@ -179,7 +182,13 @@
   .feature-item p{
     font-size:12.5px; color:var(--text-muted); margin:0;
   }
-  
+  .project-tag{font-family:var(--mono); font-size:11px; color:var(--text-muted);}
+  .project p{color:var(--text-muted); font-size:14.5px; margin-bottom:12px;}
+  .project-meta{display:flex; gap:16px; font-family:var(--mono); font-size:12px; color:var(--text-muted); flex-wrap:wrap;}
+  .project-meta a{color:var(--accent);}
+  .project-meta a:hover{text-decoration:underline;}
+
+
   /* ---------- RESUME / CONTACT ---------- */
   .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:8px;}
   .btn{
@@ -386,10 +395,11 @@
         <h3>SmartALM</h3>
         <span class="project-tag">// Go, PHP, Laravel, MySQL, JavaScript · Live · 2024 – Present</span>
       </div>
+      <img class="project-shot" src="./assets/screenshots/smartalm.png" alt="SmartALM dashboard screenshot" loading="lazy">
       <p>An Asset Lifecycle Management solution tracking assets end-to-end from acquisition to disposal, with service/warranty/ticket management, role-based access control, audit trails, and asset performance analytics.</p>
       <div class="project-meta">
         <span>role: backend engineer</span>
-        <a href="https://www.smartfactoryindia.com/smart-alm/" target="_blank" rel="noopener">source →</a>
+        <a href="https://github.com/thisispramod" target="_blank" rel="noopener">source →</a>
       </div>
     </div>
     <div class="project">
@@ -428,6 +438,19 @@
         <span>role: backend engineer</span>
         <a href="https://github.com/thisispramod" target="_blank" rel="noopener">source →</a>
       </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="route">
+      <span class="method">GET</span><span class="path">/education</span>
+      <span class="status-chip">200 OK</span>
+    </div>
+    <h2>Education</h2>
+    <div class="about-grid">
+      <p><strong>Master of Computer Applications (MCA)</strong> — Indira Gandhi National Open University (IGNOU), New Delhi · Jan 2025 – Present</p>
+      <p><strong>Bachelor of Computer Applications (BCA)</strong> — Babu Banarasi Das University, Lucknow · Sep 2017 – May 2020</p>
     </div>
   </section>
 
